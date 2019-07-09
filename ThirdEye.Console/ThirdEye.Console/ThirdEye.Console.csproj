@@ -20,6 +20,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\ThirdEye.Cognitive.Image\ThirdEye.Cognitive.Image.csproj" />
+    <ProjectReference Include="..\..\ThirdEye.Infrastructure\ThirdEye.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="appsettings.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

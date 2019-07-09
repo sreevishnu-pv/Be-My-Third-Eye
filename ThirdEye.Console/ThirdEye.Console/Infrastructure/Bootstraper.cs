@@ -1,6 +1,10 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Azure.KeyVault;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System.IO;
+using ThirdEye.Cognitive.Image.Tag;
+using ThirdEye.Infrastructure;
+using ThirdEye.Infrastructure.Helpers;
 
 namespace ThirdEye.Console.Infrastructure
 {
@@ -21,7 +25,10 @@ namespace ThirdEye.Console.Infrastructure
 
         private static void InitializeDependencies(IServiceCollection serviceCollection)
         {
+            serviceCollection.AddSingleton<IHttpHelper, HttpHelper>();
             serviceCollection.AddSingleton<IKeyVaultHelper, KeyVaultHelper>();
+            serviceCollection.AddScoped<IImageTagger, ImageTagger>();          
+
         }
 
         private static void InitializeAppsettings(IServiceCollection serviceCollection)

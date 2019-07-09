@@ -4,9 +4,9 @@ using Microsoft.IdentityModel.Clients.ActiveDirectory;
 using System;
 using System.Threading.Tasks;
 
-namespace ThirdEye.Console.Infrastructure
+namespace ThirdEye.Infrastructure.Helpers
 {
-    class KeyVaultHelper : IKeyVaultHelper
+    public class KeyVaultHelper : IKeyVaultHelper
     {
         private IOptions<AppSettings> _appSettings;
         private static string _clientId;
@@ -21,13 +21,19 @@ namespace ThirdEye.Console.Infrastructure
             _keyVaultClient = new KeyVaultClient(new KeyVaultClient.AuthenticationCallback(GetToken));
         }
 
-        async Task<string> IKeyVaultHelper.GetSecretAsync(string key)
+        async Task<string> IKeyVaultHelper.GetSecretAsync(string vaultBaseUrl)
         {
-            var secret = await _keyVaultClient.GetSecretAsync("https://thirdeyesecrets.vault.azure.net/secrets/Test");
-            return secret.Value;
+
+            string secretValue = null;
+            using (var keyVaultClient = new KeyVaultClient(new KeyVaultClient.AuthenticationCallback(KeyVaultHelper.GetToken)))
+            {
+                var secret = keyVaultClient.GetSecretAsync(_appSettings.Value.Secrets.KeyVaultUrl, _appSettings.Value.CognitiveServices.ComputerVisionSubscriptionKey).Result;
+                secretValue = secret.Value;
+            }
+            return secretValue;
         }
 
-        private async Task<string> GetToken(string authority, string resource, string scope)
+        public static async Task<string> GetToken(string authority, string resource, string scope)
         {
             var authContext = new AuthenticationContext(authority);
             ClientCredential clientCred = new ClientCredential(_clientId, _clientSecret);
@@ -40,8 +46,8 @@ namespace ThirdEye.Console.Infrastructure
         }
     }
 
-    internal interface IKeyVaultHelper
+    public interface IKeyVaultHelper
     {
-        Task<string> GetSecretAsync(string key);
+        Task<string> GetSecretAsync(string vaultBaseUrl);
     }
 }

@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.645
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThirdEye.Console", "ThirdEye.Console\ThirdEye.Console\ThirdEye.Console.csproj", "{DF866321-8B8D-4206-9FA1-5BA97753076D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThirdEye.Console", "ThirdEye.Console\ThirdEye.Console\ThirdEye.Console.csproj", "{DF866321-8B8D-4206-9FA1-5BA97753076D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThirdEye.Cognitive.Image", "ThirdEye.Cognitive.Image\ThirdEye.Cognitive.Image.csproj", "{594C3BF9-AAA0-43DB-8696-EAFA8326BA40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThirdEye.Infrastructure", "ThirdEye.Infrastructure\ThirdEye.Infrastructure.csproj", "{D596AC38-D100-4007-893F-C333CA57B0AE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{DF866321-8B8D-4206-9FA1-5BA97753076D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF866321-8B8D-4206-9FA1-5BA97753076D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF866321-8B8D-4206-9FA1-5BA97753076D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{594C3BF9-AAA0-43DB-8696-EAFA8326BA40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{594C3BF9-AAA0-43DB-8696-EAFA8326BA40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{594C3BF9-AAA0-43DB-8696-EAFA8326BA40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{594C3BF9-AAA0-43DB-8696-EAFA8326BA40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D596AC38-D100-4007-893F-C333CA57B0AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D596AC38-D100-4007-893F-C333CA57B0AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D596AC38-D100-4007-893F-C333CA57B0AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D596AC38-D100-4007-893F-C333CA57B0AE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
