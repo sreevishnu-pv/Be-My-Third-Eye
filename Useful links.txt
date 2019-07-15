@@ -1,0 +1,53 @@
+Text Analytics :
+https://azure.microsoft.com/en-in/services/cognitive-services/text-analytics/
+https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/quickstarts/csharp 
+
+Bing web search:
+https://github.com/Azure-Samples/cognitive-services-REST-api-samples
+https://azure.microsoft.com/en-us/services/cognitive-services/bing-web-search-api/
+
+Cognitive services: bemythirdeye (Delete after use)
+https://ms.portal.azure.com/#@microsoft.onmicrosoft.com/resource/subscriptions/33da230e-0927-44ac-816c-3a7d50e8381f/resourcegroups/bemythirdeye/providers/Microsoft.CognitiveServices/accounts/bemythirdeye/overview
+
+Key 1:
+4d6d2d65e5d64f1fa17f3aea446fe74e
+
+Key 2: 
+199d87241e054e7ba25a6035301e9fc3
+
+Text Analytics :
+
+Key 1:
+939eaa7af0a54e499f4fa58333000b5e
+
+Key 2:
+500f8d22b6ab4dceaaf2f442949cc64a
+
+Bing serach V7 :
+Key 1:
+ac108f24a7ff42a1a5cbb0880d21d553
+
+	Free: 4f287c42ec514ef1ba701506c95e8b1f (Using this now)
+
+Key 2:
+b8fba42ee941425d91c0e15f256788dc
+
+	Free: 8f1e504285ad4ccd915ce72d35f69401
+
+
+
+Bing location API : Returns location from Longitude and Latitude 
+Example : 16.515393, 80.605873 -> returns "Sri Durga Malleswara Swamy Varla Devasthanam"
+
+Computer Vision API (Cognitive services) 
+Using an image it returns tags : 
+Example : C:\Users\imahmed\Desktop\Hackathon\temple.jpg returned tags like : Festival, Dance, Carnival
+
+My search of "Sri Durga Malleswara Swamy Varla Devasthanam Festival Dance Carnival" -  https://www.google.com/search?q=Sri+Durga+Malleswara+Swamy+Varla+Devasthanam+Festival+Dance+Carnival&rlz=1C1GCEU_en-GBIN819IN819&oq=Sri+Durga+Malleswara+Swamy+Varla+Devasthanam+Festival+Dance+Carnival&aqs=chrome..69i57.3539j0j7&sourceid=chrome&ie=UTF-8
+Returned following URLs & Snippets:
+https:\/\/www.thehindu.com\/news\/cities\/Vijayawada\/shakhambari-devi-festival-begins\/article24514788.ece
+
+snippet: 
+"Kanakadurgamma Temple situated on the banks of river krishna, Indrakeeladri, Vijayawada. This holy shrine of Goddess Durga is a Swayambhu (self-manifested) and is the second largest temple in Andhra Pradesh."
+"Developed and Hosted by Indian Servers with the help of Sri Durga Malleswara Swamy Varla Devasthanam Lalitha Sahasranamam and Lalitha Astothara satha namavali updated"
+"The three-day Shakhambari Devi Festival at the Sri Durga Malleswara Swamy Varla Devasthanam (Kanakadurga Temple) atop Indrakeeladri began in a grand manner on Wednesday."
