@@ -13,9 +13,9 @@ namespace DocDB
 {
     public class Program
     {
-        private static readonly string EndpointUri = "https://platforminfra.documents.azure.com:443/";
+        private static readonly string urname = "https://platforminfra.documents.azure.com:443/";
         // The primary key for the Azure Cosmos account.
-        private static readonly string PrimaryKey = "SonnmG6zefrFr8vo3bzOkPFYouyv4aOnjPaWHfNJj1JIKPK2pidYbCdnNsULbjF6S6K30bL6Uio5HwWN42gFhw==";
+        private static readonly string myname = "SonnmG6zefrFr8vo3bzOkPFYouyv4aOnjPaWHfNJj1JIKPK2pidYbCdnNsULbjF6S6K30bL6Uio5HwWN42gFhw==";
 
         static void Main(string[] args)
         {
@@ -34,7 +34,7 @@ namespace DocDB
             Task.Run(async () =>
             {
                 
-                using (var client = new DocumentClient(new Uri(EndpointUri), PrimaryKey))
+                using (var client = new DocumentClient(new Uri(urname), myname))
                 {
                     var dbb = client.CreateDatabaseQuery().Where(d => d.Id == "Infrastructure").AsEnumerable().FirstOrDefault();
                     var allCollections = client.CreateDocumentCollectionQuery(dbb.SelfLink).ToList();
