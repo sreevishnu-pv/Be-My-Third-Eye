@@ -1,0 +1,38 @@
+﻿<my:ThirdEyePage x:Class="WpfApplication1.ImageUpload"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApplication1"
+      xmlns:my="clr-namespace:WpfApplication1"
+      mc:Ignorable="d" 
+      Height="329.08" Width="596.156"
+      Title="Upload Image">
+    <!--<Grid>
+    </Grid>-->
+    <Grid>
+        <Border BorderThickness="1" BorderBrush="Black" Margin="0,-53,46,125.333">
+            <Grid Margin="8.667,-0.333,0.333,0.333">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20"></RowDefinition>
+                    <RowDefinition Height="20"></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="590"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <TextBox Grid.Row="0" Grid.Column="0" Height="23" TextWrapping="Wrap" Text="17.429892" Width="120" Margin="102,6,369.333,13.667" Grid.RowSpan="2"/>
+                <TextBox Grid.Row="0" Grid.Column="0" Height="23" TextWrapping="Wrap" Text="78.341136" Width="120" Margin="390,6,81.333,13.667" Grid.RowSpan="2"/>
+                <Button  Background="#59aed3" BorderBrush="Black" Grid.Row="1" Content="Browse your image" Name="BrowseButton" Click="BrowseButton_Click" Margin="0,13.667,56,24" Grid.RowSpan="2"/>
+                <Image Grid.Row="2" Grid.Column="0" Name="BrowsedImage" Margin="0,32.333,61,-141" HorizontalAlignment="Center" Width="519"/>
+
+
+                <Label Content="Latitude" HorizontalAlignment="Left" Margin="29,3,0,9.667" Grid.RowSpan="2"/>
+                <Label Content="Longitude" HorizontalAlignment="Left" Margin="296,3,0,0" VerticalAlignment="Top" Height="30" Grid.RowSpan="2"/>
+            </Grid>
+        </Border>
+        <Button Content="Get insights" Background="#59aed3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Margin="396,212,0,0" Height="27" BorderBrush="Black" Click="Button_Click"/>
+
+    </Grid>
+</my:ThirdEyePage>

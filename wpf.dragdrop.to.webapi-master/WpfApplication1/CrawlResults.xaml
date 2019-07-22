@@ -1,0 +1,45 @@
+﻿<my:ThirdEyePage x:Class="WpfApplication1.CrawlResults"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:my="clr-namespace:WpfApplication1"
+      mc:Ignorable="d" 
+      Height="462.08" Width="596.156"
+      Title="GetInsights">
+
+    <Grid >
+
+        <Grid  Background="#59aed3" Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="300"></RowDefinition>
+                <RowDefinition Height="10"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="560"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Border Grid.Row="0" Grid.Column="0" BorderThickness="1" BorderBrush="Black" Margin="0,0,10,38">
+                <Grid Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" Margin="-0.333,-0.333,-18.333,0.667" RenderTransformOrigin="0.5,0.5" Width="568">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="11*"/>
+                        <RowDefinition Height="250*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock TextAlignment="Center" FontSize="15" Margin="0,0,10,234.667" Text="Information from internet" RenderTransformOrigin="0.735,0.48" Grid.RowSpan="2"/>
+
+                    <ScrollViewer Margin="10,20.333,23,9.667" Grid.Row="1" Visibility="Visible" IsEnabled="True">
+                        <TextBlock TextWrapping="Wrap"  Background="White"   >
+Waiting for crawl results and optimization...
+                        </TextBlock>
+
+                    </ScrollViewer>
+
+                </Grid>
+
+            </Border>
+
+            <Button Content="Get story" Background="#59aed3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Margin="393,270,0,0" Height="27" BorderBrush="Black" Click="Button_Click" RenderTransformOrigin="1.676,0.538"/>
+
+        </Grid>
+
+    </Grid>
+</my:ThirdEyePage>
