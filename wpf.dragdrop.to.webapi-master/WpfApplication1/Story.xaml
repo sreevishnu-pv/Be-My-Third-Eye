@@ -24,11 +24,11 @@
                         <RowDefinition Height="11*"/>
                         <RowDefinition Height="250*"/>
                     </Grid.RowDefinitions>
-                    <TextBlock TextAlignment="Center" FontSize="15" Margin="0,0,10,234.667" Text="Information from internet" RenderTransformOrigin="0.735,0.48" Grid.RowSpan="2"/>
+                    <TextBlock TextAlignment="Center" FontSize="15" Margin="0,0,10,234.667" Text="Story to publish" RenderTransformOrigin="0.735,0.48" Grid.RowSpan="2"/>
 
-                    <ScrollViewer Margin="10,20.333,23,9.667" Grid.Row="1" Visibility="Visible" IsEnabled="True">
+                    <ScrollViewer Margin="10,20.333,35,9.667" Grid.Row="1" Visibility="Visible" IsEnabled="True">
                         <TextBlock Name="StoryContent" TextWrapping="Wrap"  Background="White"   >
-Waiting for crawl results and oParagraphs are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc. In reality, though, the unity and coherence of ideas among sentences is what constitutes a paragraph. A paragraph is defined as “a group of sentences or a single sentence that forms a unit” (Lunsford and Connors 116). Length and appearance do not determine whether a section in a paper is a paragraph. For instance, in some styles of writing, particularly journalistic styles, a paragraph can be just one sentence long. Ultimately, a paragraph is a sentence or group of sentences that support one main idea. In this handout, we will refer to this as the “controlling idea,” because it controls what happens in the rest of the paragraph.ptimization...
+Waiting for crawl results and Paragraphs are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc. In reality, though, the unity and coherence of ideas among sentences is what constitutes a paragraph. A paragraph is defined as “a group of sentences or a single sentence that forms a unit” (Lunsford and Connors 116). Length and appearance do not determine whether a section in a paper is a paragraph. For instance, in some styles of writing, particularly journalistic styles, a paragraph can be just one sentence long. Ultimately, a paragraph is a sentence or group of sentences that support one main idea. In this handout, we will refer to this as the “controlling idea,” because it controls what happens in the rest of the paragraph.ptimization...
                         </TextBlock>
 
                     </ScrollViewer>
@@ -36,8 +36,11 @@ Waiting for crawl results and oParagraphs are the building blocks of papers. Man
                 </Grid>
 
             </Border>
+            <Button Content="Reset" Background="#59aed3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Margin="236,270,0,0" Height="27" BorderBrush="Black" Click="Reset_Click"/>
+            <Button Content="Back" Background="#59aed3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Margin="78,270,0,0" Height="27" BorderBrush="Black" Click="Back_Click"/>
 
-            <Button Content="Play Story" Name="PlayStory" Background="#59aed3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Margin="393,270,0,0" Height="27" BorderBrush="Black" Click="Button_Click" RenderTransformOrigin="1.676,0.538"/>
+            <!--<Button Content="Play Story" Name="PlayStory" Background="#59aed3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Margin="393,270,0,0" Height="27" BorderBrush="Black" Click="Button_Click" RenderTransformOrigin="1.676,0.538"/>-->
+            <Button Content="Publish Story" Name="PublishStory" Background="#59aed3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Margin="395,270,0,0" Height="27" BorderBrush="Black" Click="Button1_Click" RenderTransformOrigin="1.676,0.538"/>
 
         </Grid>
 

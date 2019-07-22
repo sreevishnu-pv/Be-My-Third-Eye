@@ -1,18 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Speech.Synthesis;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Speech.Synthesis;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace WpfApplication1
 {
@@ -31,6 +18,19 @@ namespace WpfApplication1
             var story = this.StoryContent.Text;
             SpeechSynthesizer speechSynthesizer = new SpeechSynthesizer();
             speechSynthesizer.Speak(story);
+        }
+        private void Button1_Click(object sender, RoutedEventArgs e)
+        {
+        }
+
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            NavigateBack();
+        }
+
+        private void Reset_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

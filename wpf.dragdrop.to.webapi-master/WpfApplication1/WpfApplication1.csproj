@@ -71,6 +71,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="TextFromInternet.xaml.cs">
+      <DependentUpon>TextFromInternet.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CrawlResults.xaml.cs">
       <DependentUpon>CrawlResults.xaml</DependentUpon>
     </Compile>
@@ -78,6 +81,10 @@
       <DependentUpon>Story.xaml</DependentUpon>
     </Compile>
     <Compile Include="ThirdEyePage.cs" />
+    <Page Include="TextFromInternet.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="CrawlResults.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -156,6 +163,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ThirdEye.Services\ThirdEye.Services.csproj">
+      <Project>{9d08da2a-9881-4386-8036-59f5bb601839}</Project>
+      <Name>ThirdEye.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

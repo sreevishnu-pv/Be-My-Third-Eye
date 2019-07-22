@@ -7,7 +7,6 @@ using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Handlers;
-using System.Speech.Synthesis;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -35,7 +34,7 @@ namespace WpfApplication1
         {
             InitializeComponent();
             this.DataContext = this;
-           
+
         }
 
         private void DropBox_Drop(object sender, DragEventArgs e)
@@ -174,7 +173,7 @@ namespace WpfApplication1
 
         private void ButtonAnalyze_Click(object sender, RoutedEventArgs e)
         {
-            
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -195,13 +194,18 @@ namespace WpfApplication1
             {
                 path = dlg.FileName;
                 BitmapImage source = new BitmapImage(new Uri(path));
-                BrowsedImage.Source = source;                
+                BrowsedImage.Source = source;
             }
             else
             {
                 // user did not select image
                 return;
             }
-        }        
+        }
+
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -17,6 +17,10 @@ namespace WpfApplication1
         {
             Navigate(DynamicContent, targetPage);
         }
+        public void NavigateBack()
+        {
+            DynamicContent.NavigationService.GoBack();
+        }
 
         private void Navigate(Frame sourceFrame, Page targetPage)
         {

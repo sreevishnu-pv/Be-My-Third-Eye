@@ -19,17 +19,18 @@
                 <ColumnDefinition Width="280"></ColumnDefinition>
                 <ColumnDefinition Width="280"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Border Grid.Row="0" Grid.Column="0" BorderThickness="1" BorderBrush="Black" Margin="0,0,10,38">
-                <Grid Grid.Row="0" Grid.Column="1" HorizontalAlignment="Right" Margin="0,-0.333,-11.333,0.667" RenderTransformOrigin="0.5,0.5" Width="258">
+            <Border Grid.Row="0" Grid.Column="0" BorderThickness="1" BorderBrush="Black" Margin="0,0,13.667,38.333" Grid.ColumnSpan="2" RenderTransformOrigin="0.743,0.538">
+                <Grid Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" Margin="0,-0.333,-312.333,0.667" RenderTransformOrigin="0.5,0.5" Width="559">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="11*"/>
-                        <RowDefinition Height="250*"/>
+                        <RowDefinition Height="248*"/>
+                        <RowDefinition Height="3*"/>
                     </Grid.RowDefinitions>
-                    <TextBlock TextAlignment="Center" FontSize="15" Margin="0,0,10,234.667" Text="Insights from OCR" RenderTransformOrigin="0.735,0.48" Grid.RowSpan="2"/>
+                    <TextBlock TextAlignment="Center" FontSize="15" Margin="-154,0,164,232" Text="Insights from Cognitive services" RenderTransformOrigin="0.735,0.48" Grid.RowSpan="2"/>
 
-                    <ScrollViewer Margin="0,20.333,23,9.667" Grid.Row="1" Visibility="Visible" IsEnabled="True">
+                    <ScrollViewer Margin="-140,20.667,180,7" Grid.Row="1" Visibility="Visible" IsEnabled="True">
                         <TextBlock TextWrapping="Wrap"  Background="White"  >
-Waiting for results from OCR service..
+Waiting for results cognitive services..
                         </TextBlock>
 
                     </ScrollViewer>
@@ -37,26 +38,9 @@ Waiting for results from OCR service..
                 </Grid>
 
             </Border>
-            <Border Grid.Row="0" Grid.Column="1" BorderThickness="1" BorderBrush="Black" Margin="10,0,14,38">
-                <Grid Grid.Row="0" Grid.Column="1" HorizontalAlignment="Right" Margin="0,-0.333,-11.333,0.667" RenderTransformOrigin="0.5,0.5" Width="258">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="11*"/>
-                        <RowDefinition Height="250*"/>
-                    </Grid.RowDefinitions>
-                    <TextBlock TextAlignment="Center" FontSize="15" Margin="0,0,10,234.667" Text="Insights from Computer Vision API" RenderTransformOrigin="0.735,0.48" Grid.RowSpan="2"/>
+            <Button Content="Back" Background="#59aed3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Margin="232,268,0,0" Height="27" BorderBrush="Black" Click="Back_Click" Grid.ColumnSpan="2"/>
 
-                    <ScrollViewer Margin="0,20.333,23,9.667" Grid.Row="1" Visibility="Visible" IsEnabled="True">
-                        <TextBlock TextWrapping="Wrap"  Background="White"  >
-Only triggers if OCR doesn't return anything.
-                        </TextBlock>
-
-                    </ScrollViewer>
-
-                </Grid>
-
-
-            </Border>
-            <Button Content="Get story" Background="#59aed3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Margin="115.667,268,0,0" Height="27" BorderBrush="Black" Click="Button_Click" Grid.Column="1"/>
+            <Button Content="Crawl Web" Background="#59aed3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Margin="115.667,268,0,0" Height="27" BorderBrush="Black" Click="Button_Click" Grid.Column="1"/>
 
         </Grid>
 

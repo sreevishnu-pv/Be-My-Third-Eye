@@ -32,7 +32,7 @@
                 <Label Content="Longitude" HorizontalAlignment="Left" Margin="296,3,0,0" VerticalAlignment="Top" Height="30" Grid.RowSpan="2"/>
             </Grid>
         </Border>
-        <Button Content="Get insights" Background="#59aed3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Margin="396,212,0,0" Height="27" BorderBrush="Black" Click="Button_Click"/>
+        <Button Content="Get insights" Background="#59aed3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Margin="392,212,0,0" Height="27" BorderBrush="Black" Click="Button_Click"/>
 
     </Grid>
 </my:ThirdEyePage>

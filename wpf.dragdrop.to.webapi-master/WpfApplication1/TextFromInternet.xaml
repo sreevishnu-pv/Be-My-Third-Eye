@@ -1,4 +1,4 @@
-﻿<my:ThirdEyePage x:Class="WpfApplication1.CrawlResults"
+﻿<my:ThirdEyePage x:Class="WpfApplication1.TextFromInternet"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -24,11 +24,11 @@
                         <RowDefinition Height="11*"/>
                         <RowDefinition Height="250*"/>
                     </Grid.RowDefinitions>
-                    <TextBlock TextAlignment="Center" FontSize="15" Margin="0,0,10,234.667" Text="Information from internet" RenderTransformOrigin="0.735,0.48" Grid.RowSpan="2"/>
+                    <TextBlock TextAlignment="Center" FontSize="15" Margin="0,0,10,234.667" Text="Raw Text from internet" RenderTransformOrigin="0.735,0.48" Grid.RowSpan="2"/>
 
-                    <ScrollViewer Margin="10,20.333,31,9.667" Grid.Row="1" Visibility="Visible" IsEnabled="True">
+                    <ScrollViewer Margin="10,20.333,34,9.667" Grid.Row="1" Visibility="Visible" IsEnabled="True">
                         <TextBlock TextWrapping="Wrap"  Background="White"   >
-Waiting for crawl results...
+Waiting to extract raw text..
                         </TextBlock>
 
                     </ScrollViewer>
@@ -38,7 +38,7 @@ Waiting for crawl results...
             </Border>
             <Button Content="Back" Background="#59aed3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Margin="232,270,0,0" Height="27" BorderBrush="Black" Click="Back_Click"/>
 
-            <Button Content="Extract Text" Background="#59aed3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Margin="393,270,0,0" Height="27" BorderBrush="Black" Click="Button_Click" RenderTransformOrigin="1.676,0.538"/>
+            <Button Content="Get Story" Background="#59aed3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Margin="393,270,0,0" Height="27" BorderBrush="Black" Click="Button_Click" RenderTransformOrigin="1.676,0.538"/>
 
         </Grid>
 

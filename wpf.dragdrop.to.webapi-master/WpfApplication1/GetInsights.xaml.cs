@@ -14,5 +14,10 @@
         {
             NavigateTo(new CrawlResults());
         }
+
+        private void Back_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            NavigateBack();
+        }
     }
 }

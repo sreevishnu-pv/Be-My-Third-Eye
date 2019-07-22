@@ -5,16 +5,16 @@ namespace WpfApplication1
     /// <summary>
     /// Interaction logic for CrawlResults.xaml
     /// </summary>
-    public partial class CrawlResults : ThirdEyePage
+    public partial class TextFromInternet : ThirdEyePage
     {
-        public CrawlResults()
+        public TextFromInternet()
         {
             InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            NavigateTo(new TextFromInternet());
+            NavigateTo(new Story());
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
