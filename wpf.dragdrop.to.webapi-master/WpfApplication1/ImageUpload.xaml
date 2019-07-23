@@ -22,8 +22,8 @@
                     <ColumnDefinition Width="590"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
 
-                <TextBox Grid.Row="0" Grid.Column="0" Height="23" TextWrapping="Wrap" Text="17.429892" Width="120" Margin="102,6,369.333,13.667" Grid.RowSpan="2"/>
-                <TextBox Grid.Row="0" Grid.Column="0" Height="23" TextWrapping="Wrap" Text="78.341136" Width="120" Margin="390,6,81.333,13.667" Grid.RowSpan="2"/>
+                <TextBox Grid.Row="0" Grid.Column="0" Height="23" TextWrapping="Wrap" Text="17.429892" Width="120" Margin="102,6,369.333,13.667" Grid.RowSpan="2" Name="Longitude"/>
+                <TextBox Grid.Row="0" Grid.Column="0" Height="23" TextWrapping="Wrap" Text="78.341136" Width="120" Margin="390,6,81.333,13.667" Grid.RowSpan="2" Name="Lattitude"/>
                 <Button  Background="#59aed3" BorderBrush="Black" Grid.Row="1" Content="Browse your image" Name="BrowseButton" Click="BrowseButton_Click" Margin="0,13.667,56,24" Grid.RowSpan="2"/>
                 <Image Grid.Row="2" Grid.Column="0" Name="BrowsedImage" Margin="0,32.333,61,-141" HorizontalAlignment="Center" Width="519"/>
 

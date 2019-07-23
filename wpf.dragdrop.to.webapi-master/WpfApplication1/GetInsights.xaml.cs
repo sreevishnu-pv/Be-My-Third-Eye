@@ -5,7 +5,7 @@
     /// </summary>
     public partial class GetInsights : ThirdEyePage
     {
-        public GetInsights()
+        public GetInsights(string imagePath, decimal longitude, decimal lattitude)
         {
             InitializeComponent();
         }
