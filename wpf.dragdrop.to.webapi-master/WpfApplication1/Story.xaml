@@ -29,7 +29,7 @@
                     <TextBlock TextAlignment="Center" FontSize="15" Margin="-154,0,164,232" Text="Story to publish" RenderTransformOrigin="0.735,0.48" Grid.RowSpan="2"/>
 
                     <ScrollViewer Margin="-363,20.333,-49,7.333" Grid.Row="1" Visibility="Visible" IsEnabled="True">
-                        <TextBlock TextWrapping="Wrap"  Background="White" Name="StoryContent"  >
+                        <TextBlock TextWrapping="Wrap"  Background="White" FontSize="20" Name="StoryContent"  >
 Waiting for generate story...
                         </TextBlock>
 
@@ -39,7 +39,7 @@ Waiting for generate story...
 
             </Border>
             <Button Content="Back" Background="#59aed3" HorizontalAlignment="Left" BorderThickness="1" VerticalAlignment="Top" Width="110" Margin="494.667,103.667,-333.333,-117.333" Height="22" BorderBrush="Black" Click="Back_Click" Grid.Row="1" Grid.Column="1"/>
-            <Button Content="Publish Story" Background="#59aed3" HorizontalAlignment="Left" BorderThickness="1" VerticalAlignment="Top" Width="110" Margin="619.667,103.667,-458.333,-117.333" Height="22" BorderBrush="Black" Click="Button1_Click" Grid.Column="1" Grid.Row="1" Name="PublishStory"/>
+            <Button Content="Publish Story" Background="#59aed3" HorizontalAlignment="Left" BorderThickness="1" VerticalAlignment="Top" Width="110" Margin="619.667,103.667,-458.333,-117.333" Height="22" BorderBrush="Black" Click="PublishStoryButtonClick" Grid.Column="1" Grid.Row="1" Name="PublishStory"/>
 
         </Grid>
 

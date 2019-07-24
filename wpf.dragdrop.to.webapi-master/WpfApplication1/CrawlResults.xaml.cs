@@ -13,9 +13,11 @@ namespace WpfApplication1
     {
         public CrawlResults()
         {
+            ShowProgress();
             InitializeComponent();
             ComputerVisionServices.BingWebSearchResult = new BingWebSearchService().GetWebSearchResults(ComputerVisionServices.ImageSearchResponse.SearchQuery);
             SetWebSearchOutput();
+            HideProgress();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

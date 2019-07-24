@@ -1,14 +1,12 @@
 ﻿using Microsoft.Win32;
 using System;
+using System.IO;
 using System.Windows;
 using System.Windows.Media.Imaging;
 using ThirdEye.Services.Services;
 
 namespace WpfApplication1
 {
-    /// <summary>
-    /// Interaction logic for Page1.xaml
-    /// </summary>
     public partial class ImageUpload : ThirdEyePage
     {
         public string path = string.Empty;
@@ -16,6 +14,7 @@ namespace WpfApplication1
         public ImageUpload()
         {
             InitializeComponent();
+            
             this.DataContext = this;
         }
 
@@ -23,6 +22,7 @@ namespace WpfApplication1
         {
             ComputerVisionServices.Latitude = Convert.ToDecimal(Lattitude.Text);
             ComputerVisionServices.Longitude = Convert.ToDecimal(Longitude.Text);
+            //ShowProgress();
             NavigateTo(new GetInsights());
         }
 

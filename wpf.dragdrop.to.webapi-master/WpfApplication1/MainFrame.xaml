@@ -7,7 +7,9 @@
         xmlns:my="clr-namespace:WpfApplication1"
         mc:Ignorable="d"
         Title="MainFrame" Height="462.08" Width="596.156">
+
     <Grid>
+        <ProgressBar IsIndeterminate="True"  Visibility="Hidden" Height="20" Width="1200" Name="ThirdEyeProgressBar"/>
         <DockPanel>
             <Frame x:Name="_dynamicContent" NavigationUIVisibility="Hidden" />
         </DockPanel>

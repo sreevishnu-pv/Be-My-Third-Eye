@@ -58,6 +58,7 @@ namespace ThirdEye.Services.Services
             ImageSearchResponse searchResponse = new ImageSearchResponse();
             searchResponse.Tags = tags;
             searchResponse.SearchQuery = location + " " + (string.Join(" ", tags));
+            searchResponse.Location = location;
             return searchResponse;
         }
 

@@ -12,9 +12,11 @@ namespace WpfApplication1
     {
         public GetInsights()
         {
+            ShowProgress();
             InitializeComponent();
             GetInsightsFromComputerVision();
             SetInsightOutput();
+            HideProgress();
         }
 
         private void SetInsightOutput()

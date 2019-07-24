@@ -16,8 +16,9 @@ namespace WpfApplication1
             DynamicContent = _dynamicContent;
             if (CurrentPage == null)
             {
+                ProgressBar = ThirdEyeProgressBar;
                 CurrentPage = new ImageUpload();
-                Navigate(CurrentPage);
+                Navigate(CurrentPage);                
             }
         }
 

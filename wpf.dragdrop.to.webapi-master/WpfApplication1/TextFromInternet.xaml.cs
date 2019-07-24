@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Windows;
 using System.Windows.Documents;
 using ThirdEye.Services.Services;
@@ -11,9 +12,10 @@ namespace WpfApplication1
     /// </summary>
     public partial class TextFromInternet : ThirdEyePage
     {
-
+        
         public TextFromInternet()
         {
+            ShowProgress();
             InitializeComponent();
             var webScrappingService = new WebScrappingService();
             ComputerVisionServices.BingWebSearchResult.RelatedLinks.ForEach(link =>
@@ -21,6 +23,7 @@ namespace WpfApplication1
                 ComputerVisionServices.ParagraphsFromInternet.Add(link, webScrappingService.GetParagraphsFromUri(link));
             });
             SetOutputForParagraphs();
+            HideProgress();
         }
 
         private void SetOutputForParagraphs()
@@ -54,6 +57,11 @@ namespace WpfApplication1
             });
             var contentToWrite = $"[{string.Join(",", tagsText)}]";
             fileService.WriteText(contentToWrite, "Tags.txt", ThirdEye.Services.FileTypeEnum.Tags);
+
+
+            
+
+
             NavigateTo(new Story());
         }
 

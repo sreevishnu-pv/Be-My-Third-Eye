@@ -13,5 +13,7 @@ namespace ThirdEye.Services.Services
         public static ImageSearchResponse ImageSearchResponse { get; set; }
         public static BingWebSearchResult BingWebSearchResult { get; set; }
         public static Dictionary<string, List<string>> ParagraphsFromInternet { get; set; } = new Dictionary<string, List<string>>();
+        public static string Story { get; set; }
+        public static string Location { get; set; }
     }
 }

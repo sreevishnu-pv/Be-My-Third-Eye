@@ -28,6 +28,13 @@ namespace ThirdEye.Services.Services
             }
         }
 
+        public string ReadFile(string fileName, FileTypeEnum fileType)
+        {
+            var absolutePath = $"{docPath}/{fileType.ToString()}/{fileName}";           
+            var text = File.ReadAllText(absolutePath);
+            return text;
+        }
+
         public void ClearText(string fileName)
         {
             File.WriteAllText(fileName, "");
