@@ -29,8 +29,8 @@
                     <TextBlock TextAlignment="Center" FontSize="15" Margin="-154,0,164,232" Text="Information from internet" RenderTransformOrigin="0.735,0.48" Grid.RowSpan="2"/>
 
                     <ScrollViewer Margin="-363,20.333,-49,7.333" Grid.Row="1" Visibility="Visible" IsEnabled="True">
-                        <TextBlock TextWrapping="Wrap"  Background="White"  >
-Waiting for crawl results...
+                        <TextBlock TextWrapping="Wrap"  Background="White" Name="WebSearchResults" FontSize="20"  >
+
                         </TextBlock>
 
                     </ScrollViewer>
