@@ -6,29 +6,31 @@
       xmlns:my="clr-namespace:WpfApplication1"
       mc:Ignorable="d" 
       Height="462.08" Width="596.156"
-      Title="GetInsights">
+      Title="Story">
 
-    <Grid >
+    <Grid Margin="-217,0,-511,-80" >
 
-        <Grid  Background="#59aed3" Margin="10">
+        <Grid  Background="#59aed3" Margin="-10,20,10,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="300"></RowDefinition>
                 <RowDefinition Height="10"></RowDefinition>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="560"></ColumnDefinition>
+                <ColumnDefinition Width="280"></ColumnDefinition>
+                <ColumnDefinition Width="280"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Border Grid.Row="0" Grid.Column="0" BorderThickness="1" BorderBrush="Black" Margin="0,0,10,38">
-                <Grid Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" Margin="-0.333,-0.333,-18.333,0.667" RenderTransformOrigin="0.5,0.5" Width="568">
+            <Border Grid.Row="0" Grid.Column="0" BorderThickness="1" BorderBrush="Black" Margin="10,0,-448.333,-86.333" Grid.ColumnSpan="2" RenderTransformOrigin="0.743,0.538" Grid.RowSpan="2">
+                <Grid Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" Margin="0,-0.333,-312.333,0.667" RenderTransformOrigin="0.5,0.5" Width="559">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="11*"/>
-                        <RowDefinition Height="250*"/>
+                        <RowDefinition Height="248*"/>
+                        <RowDefinition Height="3*"/>
                     </Grid.RowDefinitions>
-                    <TextBlock TextAlignment="Center" FontSize="15" Margin="0,0,10,234.667" Text="Story to publish" RenderTransformOrigin="0.735,0.48" Grid.RowSpan="2"/>
+                    <TextBlock TextAlignment="Center" FontSize="15" Margin="-154,0,164,232" Text="Story to publish" RenderTransformOrigin="0.735,0.48" Grid.RowSpan="2"/>
 
-                    <ScrollViewer Margin="10,20.333,35,9.667" Grid.Row="1" Visibility="Visible" IsEnabled="True">
-                        <TextBlock Name="StoryContent" TextWrapping="Wrap"  Background="White"   >
-Waiting for crawl results and Paragraphs are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc. In reality, though, the unity and coherence of ideas among sentences is what constitutes a paragraph. A paragraph is defined as “a group of sentences or a single sentence that forms a unit” (Lunsford and Connors 116). Length and appearance do not determine whether a section in a paper is a paragraph. For instance, in some styles of writing, particularly journalistic styles, a paragraph can be just one sentence long. Ultimately, a paragraph is a sentence or group of sentences that support one main idea. In this handout, we will refer to this as the “controlling idea,” because it controls what happens in the rest of the paragraph.ptimization...
+                    <ScrollViewer Margin="-363,20.333,-49,7.333" Grid.Row="1" Visibility="Visible" IsEnabled="True">
+                        <TextBlock TextWrapping="Wrap"  Background="White" Name="StoryContent"  >
+Waiting for generate story...
                         </TextBlock>
 
                     </ScrollViewer>
@@ -36,11 +38,8 @@ Waiting for crawl results and Paragraphs are the building blocks of papers. Many
                 </Grid>
 
             </Border>
-            <Button Content="Reset" Background="#59aed3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Margin="236,270,0,0" Height="27" BorderBrush="Black" Click="Reset_Click"/>
-            <Button Content="Back" Background="#59aed3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Margin="78,270,0,0" Height="27" BorderBrush="Black" Click="Back_Click"/>
-
-            <!--<Button Content="Play Story" Name="PlayStory" Background="#59aed3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Margin="393,270,0,0" Height="27" BorderBrush="Black" Click="Button_Click" RenderTransformOrigin="1.676,0.538"/>-->
-            <Button Content="Publish Story" Name="PublishStory" Background="#59aed3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Margin="395,270,0,0" Height="27" BorderBrush="Black" Click="Button1_Click" RenderTransformOrigin="1.676,0.538"/>
+            <Button Content="Back" Background="#59aed3" HorizontalAlignment="Left" BorderThickness="1" VerticalAlignment="Top" Width="110" Margin="494.667,103.667,-333.333,-117.333" Height="22" BorderBrush="Black" Click="Back_Click" Grid.Row="1" Grid.Column="1"/>
+            <Button Content="Publish Story" Background="#59aed3" HorizontalAlignment="Left" BorderThickness="1" VerticalAlignment="Top" Width="110" Margin="619.667,103.667,-458.333,-117.333" Height="22" BorderBrush="Black" Click="Button1_Click" Grid.Column="1" Grid.Row="1" Name="PublishStory"/>
 
         </Grid>
 

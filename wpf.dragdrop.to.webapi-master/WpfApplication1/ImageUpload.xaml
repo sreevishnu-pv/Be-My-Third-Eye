@@ -10,8 +10,8 @@
       Title="Upload Image">
     <!--<Grid>
     </Grid>-->
-    <Grid>
-        <Border BorderThickness="1" BorderBrush="Black" Margin="0,-53,46,125.333">
+    <Grid Margin="0,0,-32,0.333">
+        <Border BorderThickness="1" BorderBrush="Black" Margin="-206,-53,-181,-26">
             <Grid Margin="8.667,-0.333,0.333,0.333">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="20"></RowDefinition>
@@ -22,17 +22,17 @@
                     <ColumnDefinition Width="590"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
 
-                <TextBox Grid.Row="0" Grid.Column="0" Height="23" TextWrapping="Wrap" Text="17.429892" Width="120" Margin="102,6,369.333,13.667" Grid.RowSpan="2" Name="Longitude"/>
-                <TextBox Grid.Row="0" Grid.Column="0" Height="23" TextWrapping="Wrap" Text="78.341136" Width="120" Margin="390,6,81.333,13.667" Grid.RowSpan="2" Name="Lattitude"/>
-                <Button  Background="#59aed3" BorderBrush="Black" Grid.Row="1" Content="Browse your image" Name="BrowseButton" Click="BrowseButton_Click" Margin="0,13.667,56,24" Grid.RowSpan="2"/>
-                <Image Grid.Row="2" Grid.Column="0" Name="BrowsedImage" Margin="0,32.333,61,-141" HorizontalAlignment="Center" Width="519"/>
+                <TextBox Grid.Row="0" Grid.Column="0" Height="23" TextWrapping="Wrap" Text="16.515393" Width="120" Margin="102,6,369.333,13.667" Grid.RowSpan="2" Name="Lattitude"/>
+                <TextBox Grid.Row="0" Grid.Column="0" Height="23" TextWrapping="Wrap" Text="80.605873" Width="120" Margin="390,6,81.333,13.667" Grid.RowSpan="2" Name="Longitude"/>
+                <Button  Background="#59aed3" BorderBrush="Black" Grid.Row="1" Content="Browse your image" Name="BrowseButton" Click="BrowseButton_Click" Margin="0,13.667,-402.667,24" Grid.RowSpan="2"/>
+                <Image Grid.Row="2" Grid.Column="0" Name="BrowsedImage" Margin="6,32.333,-236.667,-289" HorizontalAlignment="Center" Width="822"/>
 
 
                 <Label Content="Latitude" HorizontalAlignment="Left" Margin="29,3,0,9.667" Grid.RowSpan="2"/>
                 <Label Content="Longitude" HorizontalAlignment="Left" Margin="296,3,0,0" VerticalAlignment="Top" Height="30" Grid.RowSpan="2"/>
             </Grid>
         </Border>
-        <Button Content="Get insights" Background="#59aed3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Margin="392,212,0,0" Height="27" BorderBrush="Black" Click="Button_Click"/>
+        <Button Content="Get insights" Background="#59aed3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Margin="656,360,-180,-58" Height="27" BorderBrush="Black" Click="GetInsightsButtonClick"/>
 
     </Grid>
 </my:ThirdEyePage>

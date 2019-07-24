@@ -6,28 +6,30 @@
       xmlns:my="clr-namespace:WpfApplication1"
       mc:Ignorable="d" 
       Height="462.08" Width="596.156"
-      Title="GetInsights">
+      Title="Results from internet">
 
-    <Grid >
+    <Grid Margin="-217,0,-511,-80" >
 
-        <Grid  Background="#59aed3" Margin="10">
+        <Grid  Background="#59aed3" Margin="-10,20,10,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="300"></RowDefinition>
                 <RowDefinition Height="10"></RowDefinition>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="560"></ColumnDefinition>
+                <ColumnDefinition Width="280"></ColumnDefinition>
+                <ColumnDefinition Width="280"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Border Grid.Row="0" Grid.Column="0" BorderThickness="1" BorderBrush="Black" Margin="0,0,10,38">
-                <Grid Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" Margin="-0.333,-0.333,-18.333,0.667" RenderTransformOrigin="0.5,0.5" Width="568">
+            <Border Grid.Row="0" Grid.Column="0" BorderThickness="1" BorderBrush="Black" Margin="10,0,-448.333,-86.333" Grid.ColumnSpan="2" RenderTransformOrigin="0.743,0.538" Grid.RowSpan="2">
+                <Grid Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" Margin="0,-0.333,-312.333,0.667" RenderTransformOrigin="0.5,0.5" Width="559">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="11*"/>
-                        <RowDefinition Height="250*"/>
+                        <RowDefinition Height="248*"/>
+                        <RowDefinition Height="3*"/>
                     </Grid.RowDefinitions>
-                    <TextBlock TextAlignment="Center" FontSize="15" Margin="0,0,10,234.667" Text="Raw Text from internet" RenderTransformOrigin="0.735,0.48" Grid.RowSpan="2"/>
+                    <TextBlock TextAlignment="Center" FontSize="15" Margin="-154,0,164,232" Text="Raw Text from internet" RenderTransformOrigin="0.735,0.48" Grid.RowSpan="2"/>
 
-                    <ScrollViewer Margin="10,20.333,34,9.667" Grid.Row="1" Visibility="Visible" IsEnabled="True">
-                        <TextBlock TextWrapping="Wrap"  Background="White"   >
+                    <ScrollViewer Margin="-363,20.333,-49,7.333" Grid.Row="1" Visibility="Visible" IsEnabled="True">
+                        <TextBlock TextWrapping="Wrap"  Background="White"  >
 Waiting to extract raw text..
                         </TextBlock>
 
@@ -36,9 +38,8 @@ Waiting to extract raw text..
                 </Grid>
 
             </Border>
-            <Button Content="Back" Background="#59aed3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Margin="232,270,0,0" Height="27" BorderBrush="Black" Click="Back_Click"/>
-
-            <Button Content="Get Story" Background="#59aed3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Margin="393,270,0,0" Height="27" BorderBrush="Black" Click="Button_Click" RenderTransformOrigin="1.676,0.538"/>
+            <Button Content="Back" Background="#59aed3" HorizontalAlignment="Left" BorderThickness="1" VerticalAlignment="Top" Width="110" Margin="494.667,103.667,-333.333,-117.333" Height="22" BorderBrush="Black" Click="Back_Click" Grid.Row="1" Grid.Column="1"/>
+            <Button Content="Get Story" Background="#59aed3" HorizontalAlignment="Left" BorderThickness="1" VerticalAlignment="Top" Width="110" Margin="619.667,103.667,-458.333,-117.333" Height="22" BorderBrush="Black" Click="Button_Click" Grid.Column="1" Grid.Row="1"/>
 
         </Grid>
 

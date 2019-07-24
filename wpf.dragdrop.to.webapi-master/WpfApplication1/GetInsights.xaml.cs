@@ -1,16 +1,48 @@
-﻿namespace WpfApplication1
+﻿using System;
+using System.Configuration;
+using System.Windows.Documents;
+using ThirdEye.Services.Services;
+
+namespace WpfApplication1
 {
     /// <summary>
     /// Interaction logic for GetInsights.xaml
     /// </summary>
     public partial class GetInsights : ThirdEyePage
     {
-        public GetInsights(string imagePath, decimal longitude, decimal lattitude)
+        public GetInsights()
         {
             InitializeComponent();
+            GetInsightsFromComputerVision();
+            SetInsightOutput();
         }
 
-        private void Button_Click(object sender, System.Windows.RoutedEventArgs e)
+        private void SetInsightOutput()
+        {
+            InsightsResults.Inlines.Add(Environment.NewLine);
+            InsightsResults.Inlines.Add(new Bold(new Underline(new Run("Tags"))));
+            InsightsResults.Inlines.Add(Environment.NewLine);
+            InsightsResults.Inlines.Add(new Italic(new Run(string.Join(",", ComputerVisionServices.ImageSearchResponse.Tags))));
+            InsightsResults.Inlines.Add(Environment.NewLine);
+            InsightsResults.Inlines.Add(Environment.NewLine);
+            InsightsResults.Inlines.Add(Environment.NewLine);
+            InsightsResults.Inlines.Add(new Bold(new Underline(new Run("Search Query"))));
+            InsightsResults.Inlines.Add(Environment.NewLine);
+            InsightsResults.Inlines.Add(new Italic(new Run(ComputerVisionServices.ImageSearchResponse.SearchQuery)));
+        }
+
+        private void GetInsightsFromComputerVision()
+        {
+            var computerVisionSubscriptionKey = ConfigurationManager.AppSettings["ComputerVisionSubscriptionKey"];
+            var ocrSubscriptionKey = ConfigurationManager.AppSettings["OCRSubscriptionKey"];
+            var imageProcessor = new ImageProcessor(computerVisionSubscriptionKey, ocrSubscriptionKey);
+            ComputerVisionServices.ImageSearchResponse = imageProcessor.ProcessImage(
+                  ComputerVisionServices.Latitude,
+                  ComputerVisionServices.Longitude,
+                  ComputerVisionServices.FileName).GetAwaiter().GetResult();
+        }
+
+        private void CrawlWebButtonClick(object sender, System.Windows.RoutedEventArgs e)
         {
             NavigateTo(new CrawlResults());
         }

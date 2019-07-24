@@ -8,9 +8,9 @@
       Height="462.08" Width="596.156"
       Title="GetInsights">
 
-    <Grid >
+    <Grid Margin="-217,0,-511,-80" >
 
-        <Grid  Background="#59aed3" Margin="10">
+        <Grid  Background="#59aed3" Margin="-10,20,10,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="300"></RowDefinition>
                 <RowDefinition Height="10"></RowDefinition>
@@ -19,7 +19,7 @@
                 <ColumnDefinition Width="280"></ColumnDefinition>
                 <ColumnDefinition Width="280"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Border Grid.Row="0" Grid.Column="0" BorderThickness="1" BorderBrush="Black" Margin="0,0,13.667,38.333" Grid.ColumnSpan="2" RenderTransformOrigin="0.743,0.538">
+            <Border Grid.Row="0" Grid.Column="0" BorderThickness="1" BorderBrush="Black" Margin="10,0,-448.333,-86.333" Grid.ColumnSpan="2" RenderTransformOrigin="0.743,0.538" Grid.RowSpan="2">
                 <Grid Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" Margin="0,-0.333,-312.333,0.667" RenderTransformOrigin="0.5,0.5" Width="559">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="11*"/>
@@ -28,9 +28,8 @@
                     </Grid.RowDefinitions>
                     <TextBlock TextAlignment="Center" FontSize="15" Margin="-154,0,164,232" Text="Insights from Cognitive services" RenderTransformOrigin="0.735,0.48" Grid.RowSpan="2"/>
 
-                    <ScrollViewer Margin="-140,20.667,180,7" Grid.Row="1" Visibility="Visible" IsEnabled="True">
-                        <TextBlock TextWrapping="Wrap"  Background="White"  >
-Waiting for results cognitive services..
+                    <ScrollViewer Margin="-363,20.333,-49,7.333" Grid.Row="1" Visibility="Visible" IsEnabled="True">
+                        <TextBlock TextWrapping="Wrap" Name="InsightsResults" Background="White" FontSize="20" >
                         </TextBlock>
 
                     </ScrollViewer>
@@ -38,9 +37,8 @@ Waiting for results cognitive services..
                 </Grid>
 
             </Border>
-            <Button Content="Back" Background="#59aed3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Margin="232,268,0,0" Height="27" BorderBrush="Black" Click="Back_Click" Grid.ColumnSpan="2"/>
-
-            <Button Content="Crawl Web" Background="#59aed3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="152" Margin="115.667,268,0,0" Height="27" BorderBrush="Black" Click="Button_Click" Grid.Column="1"/>
+            <Button Content="Back" Background="#59aed3" HorizontalAlignment="Left" BorderThickness="1" VerticalAlignment="Top" Width="110" Margin="494.667,103.667,-333.333,-117.333" Height="22" BorderBrush="Black" Click="Back_Click" Grid.Row="1" Grid.Column="1"/>
+            <Button Content="Crawl Web" Background="#59aed3" HorizontalAlignment="Left" BorderThickness="1" VerticalAlignment="Top" Width="110" Margin="619.667,103.667,-458.333,-117.333" Height="22" BorderBrush="Black" Click="CrawlWebButtonClick" Grid.Column="1" Grid.Row="1"/>
 
         </Grid>
 
