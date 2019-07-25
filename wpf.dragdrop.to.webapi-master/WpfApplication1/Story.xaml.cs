@@ -35,6 +35,10 @@ namespace WpfApplication1
             {
                 StoryContent.Text = new FileService().ReadFile($"{ComputerVisionServices.ImageSearchResponse.SearchQuery.Replace(" ", "")}.txt", ThirdEye.Services.FileTypeEnum.Output); ;
             }
+            else
+            {
+                var text = new PythonProcessingService().ExecuteExe();
+            }
             ComputerVisionServices.Story = StoryContent.Text;
         }
         private void Back_Click(object sender, RoutedEventArgs e)

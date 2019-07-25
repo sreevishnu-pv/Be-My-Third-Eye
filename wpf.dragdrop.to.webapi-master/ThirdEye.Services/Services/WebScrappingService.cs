@@ -22,7 +22,7 @@ namespace ThirdEye.Services.Services
             var htmlDocument = new HtmlWeb().Load(uri);
             string rawText = CommonExtractors.DefaultExtractor.GetText(htmlDocument.ParsedText);
             paragraphs = rawText.Split('\n').ToList();
-            paragraphs = FilterEnglishParagraphs(paragraphs);
+            //paragraphs = FilterEnglishParagraphs(paragraphs);
             return paragraphs;
         }
 

@@ -57,11 +57,6 @@ namespace WpfApplication1
             });
             var contentToWrite = $"[{string.Join(",", tagsText)}]";
             fileService.WriteText(contentToWrite, "Tags.txt", ThirdEye.Services.FileTypeEnum.Tags);
-
-
-            
-
-
             NavigateTo(new Story());
         }
 
