@@ -9,9 +9,9 @@ namespace ThirdEye.Services.Services
     public class DocumentDBService
     {
         private static string docDbUri = ConfigurationManager.AppSettings["DocDBUri"];
-       // private static string docDbNameConnect = ConfigurationManager.AppSettings["DocDBNameConnect"];
+       
 
-        public void InsertDocument(string story, List<string> links, List<string> videoLinks, string location, string userName = "ThirdEyeSystem")
+        public void InsertDocument(string title, string story, List<string> links, List<string> videoLinks, string location, string userName = "ThirdEyeSystem")
         {
             dynamic doc1Definition = new
             {
@@ -21,7 +21,9 @@ namespace ThirdEye.Services.Services
                 links = links,
                 videos = videoLinks,
                 date = DateTime.Now,
-                location = location
+                location = location,
+                fullstory = story,
+                title = title
             };
 
             using (var client = new DocumentClient(new Uri(docDbUri), "SonnmG6zefrFr8vo3bzOkPFYouyv4aOnjPaWHfNJj1JIKPK2pidYbCdnNsULbjF6S6K30bL6Uio5HwWN42gFhw=="))

@@ -19,8 +19,9 @@ namespace WpfApplication1
 
         private void PublishStoryButtonClick(object sender, RoutedEventArgs e)
         {
+            string title = ComputerVisionServices.ImageSearchResponse.SearchQuery == "SriDurgaMalleswaraSwamyVarlaDevasthanamfestivalcarnivaltradition" ? "Durga Temple" : "Aparna Construction";
             new DocumentDBService().InsertDocument
-                (
+                (title,
                 ComputerVisionServices.Story,
                 ComputerVisionServices.BingWebSearchResult.RelatedLinks,
                 ComputerVisionServices.BingWebSearchResult.RelatedVideos,
