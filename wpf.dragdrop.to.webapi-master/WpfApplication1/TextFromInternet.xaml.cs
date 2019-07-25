@@ -18,6 +18,7 @@ namespace WpfApplication1
             ShowProgress();
             InitializeComponent();
             var webScrappingService = new WebScrappingService();
+            ComputerVisionServices.ParagraphsFromInternet = new Dictionary<string, List<string>>();
             ComputerVisionServices.BingWebSearchResult.RelatedLinks.ForEach(link =>
             {
                 ComputerVisionServices.ParagraphsFromInternet.Add(link, webScrappingService.GetParagraphsFromUri(link));

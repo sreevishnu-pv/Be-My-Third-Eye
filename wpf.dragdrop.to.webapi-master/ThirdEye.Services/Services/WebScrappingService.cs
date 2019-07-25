@@ -13,7 +13,7 @@ namespace ThirdEye.Services.Services
         private TextAnalyticsClient _textAnalyticsClient;
         public WebScrappingService()
         {
-            _textAnalyticsClient = new TextAnalyticsClient(new Analytics(ConfigurationManager.AppSettings["WebScrapApiKey"]));
+            _textAnalyticsClient = new TextAnalyticsClient(new Analytics(ConfigurationManager.AppSettings["WebScrapApi"]));
             _textAnalyticsClient.Endpoint = ConfigurationManager.AppSettings["TextAnalyticsEndpoint"];
         }
         public List<string> GetParagraphsFromUri(string uri)

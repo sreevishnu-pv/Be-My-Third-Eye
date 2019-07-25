@@ -35,8 +35,8 @@ namespace WpfApplication1
 
         private void GetInsightsFromComputerVision()
         {
-            var computerVisionSubscriptionKey = ConfigurationManager.AppSettings["ComputerVisionSubscriptionKey"];
-            var ocrSubscriptionKey = ConfigurationManager.AppSettings["OCRSubscriptionKey"];
+            var computerVisionSubscriptionKey = ConfigurationManager.AppSettings["ComputerVisionSubscription"];
+            var ocrSubscriptionKey = ConfigurationManager.AppSettings["OCRSubscription"];
             var imageProcessor = new ImageProcessor(computerVisionSubscriptionKey, ocrSubscriptionKey);
             ComputerVisionServices.ImageSearchResponse = imageProcessor.ProcessImage(
                   ComputerVisionServices.Latitude,

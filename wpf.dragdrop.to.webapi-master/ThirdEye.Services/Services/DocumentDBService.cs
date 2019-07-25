@@ -9,7 +9,7 @@ namespace ThirdEye.Services.Services
     public class DocumentDBService
     {
         private static string docDbUri = ConfigurationManager.AppSettings["DocDBUri"];
-        private static string docDbAuthKey = ConfigurationManager.AppSettings["DocDBAuthKey"];
+       // private static string docDbNameConnect = ConfigurationManager.AppSettings["DocDBNameConnect"];
 
         public void InsertDocument(string story, List<string> links, List<string> videoLinks, string location, string userName = "ThirdEyeSystem")
         {
@@ -24,7 +24,7 @@ namespace ThirdEye.Services.Services
                 location = location
             };
 
-            using (var client = new DocumentClient(new Uri(docDbUri), docDbAuthKey))
+            using (var client = new DocumentClient(new Uri(docDbUri), "SonnmG6zefrFr8vo3bzOkPFYouyv4aOnjPaWHfNJj1JIKPK2pidYbCdnNsULbjF6S6K30bL6Uio5HwWN42gFhw=="))
             {
                 var dbb = client.CreateDatabaseQuery()
                     .Where(d => d.Id == "Infrastructure")

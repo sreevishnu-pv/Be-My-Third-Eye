@@ -37,7 +37,7 @@ namespace ThirdEye.Services.Services
 
         private SearchResult BingWebSearch(string searchQuery)
         {
-            var subscriptionKey = ConfigurationManager.AppSettings["BingWebSearchSubscriptionKey"];
+            var subscriptionKey = ConfigurationManager.AppSettings["BingWebSearchSubscription"];
             // Construct the search request URI.
             var uriQuery = uriBase + "?q=" + Uri.EscapeDataString(searchQuery);
 
